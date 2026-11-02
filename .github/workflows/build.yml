@@ -6,6 +6,7 @@ concurrency:
   cancel-in-progress: true
 
 on:
+workflow_dispatch
   push:
     branches:
       # choose your default branch
@@ -13,7 +14,7 @@ on:
       - main
     paths-ignore:
       - '*.md'
-workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
